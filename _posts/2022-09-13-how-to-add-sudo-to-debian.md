@@ -1,6 +1,6 @@
 # Add Sudo to Debian
 
-I like `sudo`. When I type sudo, it's a strong message that I'm doing something that could have consequences for the entire system. The alternative is execute commands logged in as a superuser. I can't handle that much power. I was surprised, and then not so surprised, when I learned that sudo doesn't come installed by default. I had to go and look up how to get it installed, and configured. 
+I like `sudo`. When I type sudo, it's a strong message that I'm doing something that could have consequences for the entire system. The alternative is execute commands logged in as a superuser. I can't handle that much power. I was surprised, and then not so surprised, when I learned that sudo doesn't come installed by default. I had to go and look up how to get it installed, and configured.
 
 Here's how.
 

@@ -1,4 +1,8 @@
-# How To Customise Linux Terminal Prompt
+---
+title: How To Customise Linux Terminal Prompt
+---
+
+{% raw %}
 
 I'm using a very low powered laptop. When I fire up Docker containers, they can take a while. I'd like to know how long, but I didn't check when I started it. If the terminal prompt had a timestamp then I wouldn't need to.
 
@@ -63,3 +67,5 @@ fi
 _Caveat 1:_ The time in the prompt is the time the _last_ command _finished_ rather than the time when the current command _started_
 
 _Caveat 2:_ I don't know where to find where colour preferences have been set, so I'm hardcoding them here. It might look odd if I changed my colour preferences
+
+{% endraw %}
