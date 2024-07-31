@@ -1,12 +1,16 @@
 ---
+layout: post
 title: How To Customise Linux Terminal Prompt
+categories: linux debian 
+excerpt_separator: <!--more-->
 ---
-
-{% raw %}
 
 I'm using a very low powered laptop. When I fire up Docker containers, they can take a while. I'd like to know how long, but I didn't check when I started it. If the terminal prompt had a timestamp then I wouldn't need to.
 
-It might be kinda useful info to have. Naturally, Im going to spent multiple hours to finding and implementing the solution. Here's what I currently get:
+It might be kinda useful info to have. Naturally, I'm going to spent multiple hours to finding and implementing the solution.
+<!--more-->
+
+Here's what I currently get:
 
 ```bash
 <user>@<host>:<current directory>$
@@ -19,10 +23,10 @@ Here's what I want:
 $
 ```
 
-How to change it in three simple steps. _*I have to confess it took me a couple of hours; hours I could have spent on worthy causes such as housework, cooking et al._
+How to change it in three simple steps: 
 
 1. Modify the PS1 environment variable in the `.bashrc` file found in your home directory. Use `man bash` (the PROMPTING section) or [bashrcgenerator.com](http://bashrcgenerator.com).
-2. Complicating things, `.bashrc` already has a few lines involved in setting the PS1 var. Figure was `$debian_chroot` is, and why you why want to leave it in the terminal prompt. [chrooted debian?](https://askubuntu.com/questions/372849/what-does-debian-chrootdebian-chroot-do-in-my-terminal-prompt)
+2. `.bashrc` already has a few lines involved in setting the PS1 var. Find out what `$debian_chroot` is, and why you why want to leave it in the terminal prompt. [chrooted debian?](https://askubuntu.com/questions/372849/what-does-debian-chrootdebian-chroot-do-in-my-terminal-prompt)
 3. Take the time to learn about `tput` and add colour commands. [tput?,](https://linuxcommand.org/lc3_adv_tput.php) [256 colours](https://www.ditig.com/256-colors-cheat-sheet)
 
 Here's what was in there already:
@@ -35,7 +39,7 @@ else
 fi
 ```
 
-And here's my first attempt:
+And here's my first attempt at customisation:
 
 ```bash
 BG_WHITE="$(tput setab 15)"
@@ -67,5 +71,3 @@ fi
 _Caveat 1:_ The time in the prompt is the time the _last_ command _finished_ rather than the time when the current command _started_
 
 _Caveat 2:_ I don't know where to find where colour preferences have been set, so I'm hardcoding them here. It might look odd if I changed my colour preferences
-
-{% endraw %}
