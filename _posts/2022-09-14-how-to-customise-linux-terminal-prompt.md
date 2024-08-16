@@ -18,6 +18,7 @@ Here's what I currently get:
 
 Here's what I want:
 
+{% raw %}
 ```bash
 [<YYYY-MM-DD-HH-MM-SS-TZ>]<user>@<host>:<full path>
 $
@@ -67,6 +68,7 @@ else
     PS1+="\$ "
 fi
 ```
+{% endraw %}
 
 _Caveat 1:_ The time in the prompt is the time the _last_ command _finished_ rather than the time when the current command _started_
 
